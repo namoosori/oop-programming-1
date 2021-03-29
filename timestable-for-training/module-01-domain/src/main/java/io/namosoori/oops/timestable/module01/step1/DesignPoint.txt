@@ -1,0 +1,2 @@
+Separation of concerns:
+ - domain

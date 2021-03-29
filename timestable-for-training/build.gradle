@@ -1,0 +1,33 @@
+plugins {
+    id 'maven'
+}
+
+ext {
+    timestableVersion = '1.0.0-SNAPSHOT'
+    lombokVersion = "1.18.18"
+}
+
+allprojects {
+    group 'io.namoosori'
+    version timestableVersion
+}
+
+subprojects {
+
+    apply plugin: 'java-library'
+
+    sourceCompatibility = 1.15
+    targetCompatibility = 1.15
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        compileOnly("org.projectlombok:lombok:${lombokVersion}")
+        annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
+        implementation('com.google.code.gson:gson:2.8.5')
+        implementation('com.fatboyindustrial.gson-javatime-serialisers:gson-javatime-serialisers:1.1.1')
+        implementation('org.apache.commons:commons-lang3:3.10')
+    }
+}

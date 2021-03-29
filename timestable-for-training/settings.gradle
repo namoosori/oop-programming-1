@@ -1,0 +1,6 @@
+rootProject.name = 'timestable-for-training'
+include 'module-00-legacy'
+include 'module-01-domain'
+include 'module-02-view'
+include 'module-03-menu'
+
